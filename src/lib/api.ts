@@ -16,6 +16,32 @@ class ApiError extends Error {
   }
 }
 
+// --- Warm-up ---------------------------------------------------------------
+// The free backend sleeps after ~15 min idle and cold-starts in ~30-50s. We ping
+// /health the moment a user shows intent (opens the tool, focuses the box, starts
+// adding a file) so the server is already waking up by the time they submit.
+// Fire-and-forget and throttled so it never blocks the UI or spams the server.
+let _lastWarm = 0;
+
+export function warmUp(): void {
+  const now = Date.now();
+  if (now - _lastWarm < 45_000) return; // at most once every 45s
+  _lastWarm = now;
+  try {
+    const ctrl = new AbortController();
+    setTimeout(() => ctrl.abort(), 8000);
+    void fetch(`${API_BASE_URL}/health`, {
+      method: "GET",
+      cache: "no-store",
+      signal: ctrl.signal,
+    }).catch(() => {
+      /* ignore — this is best-effort */
+    });
+  } catch {
+    /* ignore */
+  }
+}
+
 async function handle<T>(res: Response): Promise<T> {
   if (!res.ok) {
     let code = "error";

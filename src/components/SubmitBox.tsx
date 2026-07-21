@@ -1,8 +1,8 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { api } from "../lib/api";
+import { api, warmUp } from "../lib/api";
 
 const MAX_MB = 25;
 
@@ -17,7 +17,14 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
+  // Wake the free backend as soon as the tool is on screen, so it is ready by
+  // the time the user submits.
+  useEffect(() => {
+    warmUp();
+  }, []);
+
   function pickFile(f: File | null) {
+    warmUp(); // choosing a file is a strong signal of intent
     setError(null);
     if (!f) return;
     if (f.size > MAX_MB * 1024 * 1024) {
@@ -54,6 +61,7 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
       <div
         onDragOver={(e) => {
           e.preventDefault();
+          warmUp();
           setDragging(true);
         }}
         onDragLeave={() => setDragging(false)}
@@ -74,6 +82,7 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autofocus}
           value={text}
+          onFocus={() => warmUp()}
           onChange={(e) => setText(e.target.value)}
           onPaste={(e) => {
             const f = e.clipboardData.files?.[0];
