@@ -1,0 +1,230 @@
+{
+  "app": {
+    "tagline": "Vous nous envoyez quelque chose. Nous vous disons si c'est vrai, et pourquoi.",
+    "name": "237Sentinel"
+  },
+  "nav": {
+    "check": "Vérifier",
+    "community": "Communauté",
+    "organizations": "Organisations",
+    "forOrganizations": "Pour les organisations",
+    "about": "À propos",
+    "language": "English",
+    "menu": "Menu"
+  },
+  "landing": {
+    "heroTitle": "Est-ce que c'est vrai ?",
+    "heroSub": "Collez un message ou un lien, ou ajoutez une photo, une note vocale, une vidéo ou un PDF. Nous le vérifions et vous disons clairement s'il faut y faire confiance — en quelques secondes.",
+    "trustLine": "Gratuit pour tous. Sans compte. En français ou en anglais.",
+    "howTitle": "Comment ça marche",
+    "how1Title": "Vous l'envoyez",
+    "how1Body": "Un lien, un message, une image, une note vocale, une vidéo, un document — ce que vous avez reçu.",
+    "how2Title": "Nous le vérifions",
+    "how2Body": "Nous comprenons de quoi il s'agit vraiment, qui il prétend être, et ce qu'il vous demande de faire.",
+    "how3Title": "Vous obtenez une réponse claire",
+    "how3Body": "L'une des trois : c'est bien eux, nous ne pouvons pas le confirmer, ou cela a été modifié — avec la conduite à tenir.",
+    "whyTitle": "Pourquoi ce service existe",
+    "whyBody": "En 2025, les Camerounais ont perdu plus d'un milliard de FCFA à cause des arnaques en ligne. Trop souvent, la fraude est détectée après que l'argent a disparu. Ceci met la vérification entre vos mains, avant que vous n'agissiez.",
+    "verdictsTitle": "Trois réponses honnêtes",
+    "verifiedName": "C'est bien eux",
+    "verifiedDesc": "L'expéditeur correspond à un canal officiel que nous avons enregistré.",
+    "unconfirmedName": "Nous ne pouvons pas le confirmer",
+    "unconfirmedDesc": "Aucune preuve que c'est faux, ni aucune preuve que c'est vrai. La réponse la plus fréquente — et la plus honnête.",
+    "alteredName": "Cela a été modifié",
+    "alteredDesc": "Nous avons trouvé de forts indices que le contenu a été modifié ou inventé."
+  },
+  "check": {
+    "title": "Vérifier quelque chose",
+    "subtitle": "Collez un texte ou un lien, ou déposez un fichier. Pas besoin de préciser le type — nous le déterminons.",
+    "placeholder": "Collez le message ou le lien ici…",
+    "dropHint": "ou glissez une photo, une note vocale, une vidéo ou un PDF ici",
+    "browse": "Choisir un fichier",
+    "submit": "Vérifier",
+    "checking": "Vérification…",
+    "fileSelected": "Fichier prêt",
+    "remove": "Retirer",
+    "consent": "Vous pouvez le conserver pour aider à protéger les autres (facultatif).",
+    "empty": "Collez quelque chose ou ajoutez d'abord un fichier.",
+    "tooLarge": "Ce fichier est trop volumineux (25 Mo maximum).",
+    "error": "Une erreur est survenue. Veuillez réessayer.",
+    "trySample": "Essayer un exemple"
+  },
+  "result": {
+    "title": "Résultat",
+    "checkedLabel": "Ce que nous avons vérifié",
+    "summaryLabel": "De quoi il s'agit",
+    "actionLabel": "Que faire",
+    "whatToDo": "Que faire ensuite",
+    "technical": "Détails techniques",
+    "technicalHint": "Pour le lecteur curieux — les signaux bruts derrière ce résultat.",
+    "signal": "Signal",
+    "riskLevel": "Niveau",
+    "confidence": "Confiance",
+    "confidenceLow": "faible",
+    "confidenceMedium": "moyenne",
+    "confidenceHigh": "élevée",
+    "checkAnother": "Vérifier autre chose",
+    "report": "Signaler à la communauté",
+    "share": "Partager ce résultat",
+    "meToo": "Cela m'est aussi arrivé",
+    "notFound": "Nous n'avons pas trouvé ce résultat.",
+    "civic": "Avant de partager, vérifiez la source. Signaler ceci protège d'autres Camerounais."
+  },
+  "verdict": {
+    "VERIFIED": "C'est bien eux.",
+    "UNCONFIRMED": "Nous ne pouvons pas le confirmer.",
+    "ALTERED": "Cela a été modifié."
+  },
+  "community": {
+    "title": "Signalements de la communauté",
+    "subtitle": "Ce que d'autres voient en ce moment. Anonyme. Par région.",
+    "empty": "Aucun signalement pour l'instant. Ils apparaîtront ici.",
+    "confirmations": "{{count}} personnes confirment",
+    "confirmations_one": "{{count}} personne confirme",
+    "meToo": "Cela m'est aussi arrivé",
+    "post": "Signaler une arnaque",
+    "region": "Région",
+    "allRegions": "Toutes les régions",
+    "category": "Type",
+    "body": "Que s'est-il passé ?",
+    "bodyPlaceholder": "Décrivez avec vos mots. N'indiquez le numéro ou les données personnelles de personne.",
+    "submit": "Envoyer le signalement",
+    "posted": "Merci. Votre signalement apparaîtra après une vérification rapide.",
+    "moderationNote": "Les signalements sont vérifiés avant publication, pour protéger la vie privée."
+  },
+  "organizations": {
+    "title": "Organisations enregistrées",
+    "subtitle": "Leurs vrais canaux officiels — pour que vous puissiez toujours vérifier par vous-même.",
+    "search": "Rechercher une école, une banque, un ministère…",
+    "empty": "Aucune organisation ne correspond à cette recherche.",
+    "channels": "Canaux officiels",
+    "noChannels": "Aucun canal public indiqué.",
+    "verified": "Source officielle",
+    "kind": {
+      "government": "Gouvernement",
+      "telecom": "Télécom",
+      "bank": "Banque",
+      "school": "École",
+      "media": "Média",
+      "microfinance": "Microfinance",
+      "church": "Église",
+      "association": "Association",
+      "other": "Organisation"
+    },
+    "channelType": {
+      "phone": "Téléphone",
+      "handle": "Compte social",
+      "domain": "Site web",
+      "page": "Page"
+    }
+  },
+  "forOrg": {
+    "title": "Quand on demande si c'est vraiment vous, la réponse doit être oui.",
+    "subtitle": "Enregistrez vos canaux officiels. Quand un citoyen vérifie un message qui prétend venir de vous, nous pouvons confirmer que c'est bien vous — et nous vous alertons quand quelqu'un vous imite.",
+    "freeTitle": "Gratuit",
+    "freeDesc": "Votre organisation dans le registre public avec vos canaux vérifiés, pour que chacun puisse vérifier de façon indépendante.",
+    "freeItems": [
+      "Profil public avec vos canaux officiels",
+      "Apparaître comme « vérifié » quand des citoyens vérifient vos messages",
+      "Signalements de la communauté qui vous mentionnent"
+    ],
+    "paidTitle": "Protégé",
+    "paidDesc": "Tout le gratuit, plus une protection active et des informations.",
+    "paidItems": [
+      "Alertes d'usurpation quand quelqu'un se fait passer pour vous",
+      "Voir combien de fois on vérifie des messages prétendant venir de vous",
+      "Accès API pour vérifier les expéditeurs à grande échelle",
+      "Traitement prioritaire de vos canaux"
+    ],
+    "cta": "Enregistrer votre organisation",
+    "contact": "Nous contacter"
+  },
+  "register": {
+    "title": "Enregistrer votre organisation",
+    "name": "Nom de l'organisation",
+    "kind": "Type",
+    "region": "Région",
+    "website": "Site web",
+    "description": "Brève description",
+    "channelsTitle": "Vos canaux officiels",
+    "channelsHint": "Ajoutez les numéros, sites et comptes que vous utilisez avec le public.",
+    "addChannel": "Ajouter un canal",
+    "submit": "Créer l'enregistrement",
+    "done": "Votre organisation est enregistrée et en attente de validation.",
+    "apiKeyNote": "Enregistrez cette clé API maintenant — elle n'est affichée qu'une seule fois."
+  },
+  "about": {
+    "title": "À propos de 237Sentinel",
+    "body": "237Sentinel est une plateforme de vérification numérique pour le Cameroun. Envoyez-lui tout ce qui vous semble suspect, et elle vous dit s'il faut y faire confiance, et pourquoi — en langage clair.",
+    "principlesTitle": "Ce en quoi nous croyons",
+    "p1": "Nous répondons à « est-ce bien ce que cela prétend être ? » — jamais « un ordinateur a-t-il été impliqué ? ». Un prospectus fait par IA n'a rien de mal ; un décret falsifié, si.",
+    "p2": "Nous n'exagérons pas la certitude. Quand les preuves sont minces, nous disons « nous ne pouvons pas le confirmer ». Cette honnêteté est essentielle.",
+    "p3": "Ne pas figurer dans notre registre ne signifie jamais qu'une chose est fausse. Cela signifie que nous ne pouvons pas la confirmer — vérifiez donc auprès de la source.",
+    "limitsTitle": "Ce que nous ne faisons pas encore",
+    "limits": [
+      "Nous lisons le français et l'anglais, pas encore le Pidgin ni le Camfranglais.",
+      "Nous ne pouvons pas vérifier l'échange de carte SIM.",
+      "La précision sur le terrain est inférieure aux tests de laboratoire — considérez chaque résultat comme une orientation, pas une preuve.",
+      "WhatsApp n'est pas encore actif."
+    ]
+  },
+  "privacy": {
+    "title": "Confidentialité et protection des données",
+    "body": "Nous gardons le minimum. Nous ne stockons jamais votre adresse IP, seulement un code caché temporaire pour prévenir les abus. Nous conservons un bref aperçu expurgé de ce que vous envoyez — jamais le contenu complet — et nous retirons les numéros et e-mails de tout ce qui est partagé publiquement.",
+    "mediaTitle": "Vos fichiers",
+    "mediaBody": "Nous ne conservons pas les fichiers que vous envoyez, sauf accord explicite de votre part. Dans ce cas, ils sont supprimés automatiquement après 30 jours.",
+    "lawBody": "Ceci est conforme à la Loi n° 2024/017 sur la protection des données à caractère personnel."
+  },
+  "apiDocs": {
+    "title": "API",
+    "body": "237Sentinel est ouvert. La documentation interactive complète de l'API est fournie par le backend.",
+    "open": "Ouvrir la documentation de l'API"
+  },
+  "auth": {
+    "apiKey": "Clé API",
+    "apiKeyPlaceholder": "sk_…",
+    "signIn": "Ouvrir le tableau de bord",
+    "signInHint": "Collez la clé API reçue lors de l'enregistrement.",
+    "signOut": "Se déconnecter",
+    "invalid": "Cette clé n'a pas été acceptée."
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "alertsNew": "Nouvelles alertes d'usurpation",
+    "alertsTotal": "Total des alertes",
+    "queries": "Vérifications vous concernant",
+    "channels": "Canaux",
+    "alerts": "Alertes",
+    "apiKeys": "Clés API",
+    "settings": "Paramètres",
+    "noAlerts": "Aucune alerte. C'est une bonne nouvelle.",
+    "addChannel": "Ajouter un canal",
+    "newApiKey": "Créer une nouvelle clé",
+    "revoke": "Révoquer"
+  },
+  "admin": {
+    "title": "Administration",
+    "tokenPrompt": "Entrez le jeton d'administration pour continuer.",
+    "pendingOrgs": "Organisations en attente d'approbation",
+    "pendingReports": "Signalements en attente de modération",
+    "approve": "Approuver",
+    "reject": "Rejeter",
+    "stats": "Statistiques du système"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "back": "Retour",
+    "learnMore": "En savoir plus",
+    "close": "Fermer",
+    "optional": "facultatif",
+    "copied": "Copié",
+    "copy": "Copier"
+  },
+  "footer": {
+    "rights": "Un outil civique de vérification pour le Cameroun.",
+    "privacy": "Confidentialité",
+    "about": "À propos",
+    "api": "API",
+    "report": "Signaler à l'ANTIC : 8202 / 8206"
+  }
+}

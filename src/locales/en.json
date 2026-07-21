@@ -1,0 +1,230 @@
+{
+  "app": {
+    "tagline": "You send us something. We tell you if it's real, and why.",
+    "name": "237Sentinel"
+  },
+  "nav": {
+    "check": "Check something",
+    "community": "Community",
+    "organizations": "Organizations",
+    "forOrganizations": "For organizations",
+    "about": "About",
+    "language": "Français",
+    "menu": "Menu"
+  },
+  "landing": {
+    "heroTitle": "Is this real?",
+    "heroSub": "Paste a message or link, or add a photo, voice note, video or PDF. We check it and tell you plainly whether to trust it — in seconds.",
+    "trustLine": "Free for everyone. No account needed. English or French.",
+    "howTitle": "How it works",
+    "how1Title": "You send it",
+    "how1Body": "A link, a message, an image, a voice note, a video, a document — whatever you received.",
+    "how2Title": "We check it",
+    "how2Body": "We read what it is really about, who it claims to be from, and what it asks you to do.",
+    "how3Title": "You get a clear answer",
+    "how3Body": "One of three: this is really them, we cannot confirm this, or this was altered — with what to do next.",
+    "whyTitle": "Why this exists",
+    "whyBody": "In 2025, Cameroonians lost over 1 billion FCFA to online scams. Too often the fraud is caught after the money is gone. This puts the check in your hands, before you act.",
+    "verdictsTitle": "Three honest answers",
+    "verifiedName": "This is really them",
+    "verifiedDesc": "The sender matches an official channel we have on record.",
+    "unconfirmedName": "We cannot confirm this",
+    "unconfirmedDesc": "No proof it is fake, and no proof it is real. The most common — and most honest — answer.",
+    "alteredName": "This was altered",
+    "alteredDesc": "We found strong signs the content was changed or made up."
+  },
+  "check": {
+    "title": "Check something",
+    "subtitle": "Paste text or a link, or drop a file. You don't need to say what kind — we work it out.",
+    "placeholder": "Paste the message or link here…",
+    "dropHint": "or drag a photo, voice note, video or PDF here",
+    "browse": "Choose a file",
+    "submit": "Check it",
+    "checking": "Checking…",
+    "fileSelected": "File ready",
+    "remove": "Remove",
+    "consent": "You may keep this to help protect others (optional).",
+    "empty": "Paste something or add a file first.",
+    "tooLarge": "That file is too large (max 25 MB).",
+    "error": "Something went wrong. Please try again.",
+    "trySample": "Try an example"
+  },
+  "result": {
+    "title": "Result",
+    "checkedLabel": "What we checked",
+    "summaryLabel": "What this is",
+    "actionLabel": "What to do",
+    "whatToDo": "What to do next",
+    "technical": "Technical detail",
+    "technicalHint": "For a curious reader — the raw signals behind this result.",
+    "signal": "Signal",
+    "riskLevel": "Level",
+    "confidence": "Confidence",
+    "confidenceLow": "low",
+    "confidenceMedium": "medium",
+    "confidenceHigh": "high",
+    "checkAnother": "Check something else",
+    "report": "Report this to the community",
+    "share": "Share this result",
+    "meToo": "This happened to me too",
+    "notFound": "We could not find that result.",
+    "civic": "Before you share this, check the source. Reporting this protects other Cameroonians."
+  },
+  "verdict": {
+    "VERIFIED": "This is really them.",
+    "UNCONFIRMED": "We cannot confirm this.",
+    "ALTERED": "This was altered."
+  },
+  "community": {
+    "title": "Community reports",
+    "subtitle": "What other people are seeing right now. Anonymous. Regional.",
+    "empty": "No reports yet. When people report scams, they show here.",
+    "confirmations": "{{count}} people confirmed",
+    "confirmations_one": "{{count}} person confirmed",
+    "meToo": "This happened to me too",
+    "post": "Report a scam",
+    "region": "Region",
+    "allRegions": "All regions",
+    "category": "Type",
+    "body": "What happened?",
+    "bodyPlaceholder": "Describe it in your own words. Do not include anyone's phone number or personal details.",
+    "submit": "Send report",
+    "posted": "Thank you. Your report will appear after a quick review.",
+    "moderationNote": "Reports are reviewed before they appear, to protect people's privacy."
+  },
+  "organizations": {
+    "title": "Registered organizations",
+    "subtitle": "Their real, official channels — so you can always check for yourself.",
+    "search": "Search for a school, bank, ministry…",
+    "empty": "No organizations match that search.",
+    "channels": "Official channels",
+    "noChannels": "No public channels listed.",
+    "verified": "Official record",
+    "kind": {
+      "government": "Government",
+      "telecom": "Telecom",
+      "bank": "Bank",
+      "school": "School",
+      "media": "Media",
+      "microfinance": "Microfinance",
+      "church": "Church",
+      "association": "Association",
+      "other": "Organization"
+    },
+    "channelType": {
+      "phone": "Phone",
+      "handle": "Social handle",
+      "domain": "Website",
+      "page": "Page"
+    }
+  },
+  "forOrg": {
+    "title": "When someone asks if it's really you, the answer should be yes.",
+    "subtitle": "Register your official channels. When a citizen checks a message that claims to be from you, we can confirm it's really you — and we tell you when someone is impersonating you.",
+    "freeTitle": "Free",
+    "freeDesc": "Your organization listed in the public registry with your verified channels, so anyone can check independently.",
+    "freeItems": [
+      "Public profile with your official channels",
+      "Appear as \"verified\" when citizens check your messages",
+      "Community reports that mention you"
+    ],
+    "paidTitle": "Protected",
+    "paidDesc": "Everything in Free, plus active protection and insight.",
+    "paidItems": [
+      "Impersonation alerts when someone poses as you",
+      "See how often people check messages claiming to be you",
+      "API access to verify senders at scale",
+      "Priority review of your channels"
+    ],
+    "cta": "Register your organization",
+    "contact": "Talk to us"
+  },
+  "register": {
+    "title": "Register your organization",
+    "name": "Organization name",
+    "kind": "Type",
+    "region": "Region",
+    "website": "Website",
+    "description": "Short description",
+    "channelsTitle": "Your official channels",
+    "channelsHint": "Add the phone numbers, websites and handles you use with the public.",
+    "addChannel": "Add channel",
+    "submit": "Create registration",
+    "done": "Your organization is registered and pending review.",
+    "apiKeyNote": "Save this API key now — it is shown only once."
+  },
+  "about": {
+    "title": "About 237Sentinel",
+    "body": "237Sentinel is a digital verification platform for Cameroon. Send it anything suspicious you receive online, and it tells you whether to trust it, and why — in plain language.",
+    "principlesTitle": "What we believe",
+    "p1": "We answer \"is this what it claims to be?\" — never \"was a computer involved?\". An AI-made shop flyer is fine; a forged decree is not.",
+    "p2": "We do not overstate certainty. When the evidence is thin, we say \"we cannot confirm this\". That honesty is the point.",
+    "p3": "Not being in our registry never means something is fake. It means we cannot confirm it — so check with the source.",
+    "limitsTitle": "What we do not do yet",
+    "limits": [
+      "We read English and French, not Pidgin or Camfranglais yet.",
+      "We cannot check SIM-swap status.",
+      "Field accuracy is lower than lab benchmarks — treat every result as guidance, not proof.",
+      "WhatsApp is not live yet."
+    ]
+  },
+  "privacy": {
+    "title": "Privacy & data protection",
+    "body": "We keep as little as possible. We never store your IP address, only a temporary hidden code to prevent abuse. We keep a short, redacted preview of what you send — never the full content — and we remove phone numbers and emails from anything shared publicly.",
+    "mediaTitle": "Your files",
+    "mediaBody": "We do not keep the files you send unless you explicitly agree. When you do, they are deleted automatically after 30 days.",
+    "lawBody": "This aligns with Law No. 2024/017 on Personal Data Protection."
+  },
+  "apiDocs": {
+    "title": "API",
+    "body": "237Sentinel is open. The full interactive API documentation is served by the backend.",
+    "open": "Open the API docs"
+  },
+  "auth": {
+    "apiKey": "API key",
+    "apiKeyPlaceholder": "sk_…",
+    "signIn": "Open dashboard",
+    "signInHint": "Paste the API key you received when registering.",
+    "signOut": "Sign out",
+    "invalid": "That key was not accepted."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "alertsNew": "New impersonation alerts",
+    "alertsTotal": "Total alerts",
+    "queries": "Verification queries about you",
+    "channels": "Channels",
+    "alerts": "Alerts",
+    "apiKeys": "API keys",
+    "settings": "Settings",
+    "noAlerts": "No alerts. That's good news.",
+    "addChannel": "Add a channel",
+    "newApiKey": "Create a new key",
+    "revoke": "Revoke"
+  },
+  "admin": {
+    "title": "Admin",
+    "tokenPrompt": "Enter the admin token to continue.",
+    "pendingOrgs": "Organizations awaiting approval",
+    "pendingReports": "Reports awaiting moderation",
+    "approve": "Approve",
+    "reject": "Reject",
+    "stats": "System statistics"
+  },
+  "common": {
+    "loading": "Loading…",
+    "back": "Back",
+    "learnMore": "Learn more",
+    "close": "Close",
+    "optional": "optional",
+    "copied": "Copied",
+    "copy": "Copy"
+  },
+  "footer": {
+    "rights": "A civic verification tool for Cameroon.",
+    "privacy": "Privacy",
+    "about": "About",
+    "api": "API",
+    "report": "Report to ANTIC: 8202 / 8206"
+  }
+}
