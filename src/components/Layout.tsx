@@ -1,6 +1,6 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { APP_NAME } from "../config";
+import { APP_NAME, TELEGRAM_BOT_URL } from "../config";
 
 function LangToggle() {
   const { i18n } = useTranslation();
@@ -79,6 +79,14 @@ export default function Layout() {
             <Link to="/api-docs" className="hover:text-ink">
               {t("footer.api")}
             </Link>
+            <a
+              href={TELEGRAM_BOT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-ink"
+            >
+              Telegram
+            </a>
             <span className="text-ink-faint">{t("footer.report")}</span>
           </div>
         </div>

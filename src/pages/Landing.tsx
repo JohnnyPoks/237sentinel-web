@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import SubmitBox from "../components/SubmitBox";
+import { TELEGRAM_BOT_URL } from "../config";
 
 export default function Landing() {
   const { t } = useTranslation();
@@ -39,6 +40,16 @@ export default function Landing() {
         </div>
         <p className="mt-3 text-center text-sm text-ink-faint">
           {t("landing.trustLine")}
+        </p>
+        <p className="mt-2 text-center text-sm">
+          <a
+            href={TELEGRAM_BOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-ink underline decoration-sand-400 underline-offset-4 hover:decoration-ink"
+          >
+            {t("landing.orTelegram")} →
+          </a>
         </p>
       </section>
 
