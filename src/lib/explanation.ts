@@ -3,7 +3,7 @@ import type { Explanation, Verdict } from "./types";
 /** Pick the language-specific field from an Explanation (en/fr). */
 export function pickExplanation(
   exp: Explanation,
-  base: "headline" | "body" | "action" | "checked",
+  base: "headline" | "summary" | "body" | "action" | "checked",
   lang: string,
 ): string {
   const suffix = lang.startsWith("fr") ? "fr" : "en";

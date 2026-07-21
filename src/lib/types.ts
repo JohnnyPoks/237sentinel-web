@@ -41,6 +41,8 @@ export interface RegistryMatch {
 export interface Explanation {
   headline_en: string;
   headline_fr: string;
+  summary_en?: string;
+  summary_fr?: string;
   body_en: string;
   body_fr: string;
   action_en: string;

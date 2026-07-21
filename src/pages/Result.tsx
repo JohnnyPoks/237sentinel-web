@@ -50,6 +50,7 @@ export default function Result() {
   const lang = i18n.language;
   const exp = result.explanation;
   const headline = pick(exp, "headline", lang) || t(`verdict.${result.verdict}`);
+  const summary = pick(exp, "summary", lang) || result.summary;
   const body = pick(exp, "body", lang);
   const action = pick(exp, "action", lang);
   const checked = pick(exp, "checked", lang);
@@ -91,7 +92,7 @@ export default function Result() {
             <h2 className="text-xs font-bold uppercase tracking-wide text-ink-faint">
               {t("result.summaryLabel")}
             </h2>
-            <p className="mt-1 text-lg leading-relaxed">{result.summary}</p>
+            <p className="mt-1 text-lg leading-relaxed">{summary}</p>
           </section>
 
           {/* Body: why */}
