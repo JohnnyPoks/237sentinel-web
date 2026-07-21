@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -16,12 +16,9 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
   const [error, setError] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
-
-  // Wake the free backend as soon as the tool is on screen, so it is ready by
-  // the time the user submits.
-  useEffect(() => {
-    warmUp();
-  }, []);
+  // Note: the initial warm-up ping fires from Layout (mounted on every page,
+  // before the user even reaches this component). The calls below are extra
+  // signals of intent, throttled by warmUp() itself.
 
   function pickFile(f: File | null) {
     warmUp(); // choosing a file is a strong signal of intent

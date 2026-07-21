@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { APP_NAME, TELEGRAM_BOT_URL } from "../config";
+import { warmUp } from "../lib/api";
 import ShieldMark from "./ShieldMark";
 
 function LangToggle() {
@@ -30,6 +31,12 @@ export default function Layout() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
+
+  // The layout wraps every page, so this warms the free backend the instant the
+  // app loads — before the user reaches or touches the submit box.
+  useEffect(() => {
+    warmUp();
+  }, []);
 
   const navClass = ({ isActive }: { isActive: boolean }) =>
     `text-sm font-semibold transition-colors ${
