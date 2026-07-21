@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { APP_NAME, TELEGRAM_BOT_URL } from "../config";
+import ShieldMark from "./ShieldMark";
 
 function LangToggle() {
   const { i18n } = useTranslation();
@@ -48,9 +49,9 @@ export default function Layout() {
           <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
             <span
               aria-hidden
-              className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-sand-50 font-display text-lg leading-none"
+              className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-sand-50"
             >
-              2
+              <ShieldMark className="h-5 w-5" />
             </span>
             <span className="font-display text-lg font-semibold">{APP_NAME}</span>
           </Link>
