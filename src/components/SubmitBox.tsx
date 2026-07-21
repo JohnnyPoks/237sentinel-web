@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { api, warmUp } from "../lib/api";
+import { useWarmState } from "../lib/useWarmState";
 
 const MAX_MB = 25;
 
@@ -16,6 +17,7 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
   const [error, setError] = useState<string | null>(null);
   const [dragging, setDragging] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+  const warmState = useWarmState();
   // Note: the initial warm-up ping fires from Layout (mounted on every page,
   // before the user even reaches this component). The calls below are extra
   // signals of intent, throttled by warmUp() itself.
@@ -149,6 +151,12 @@ export default function SubmitBox({ autofocus = false }: { autofocus?: boolean }
           {busy ? t("check.checking") : t("check.submit")}
         </button>
       </div>
+
+      {busy && warmState !== "ready" && (
+        <p className="mt-3 text-center text-sm text-ink-faint">
+          {t("common.patience")}
+        </p>
+      )}
     </div>
   );
 }

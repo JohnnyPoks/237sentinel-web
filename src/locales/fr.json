@@ -247,7 +247,9 @@
     "close": "Fermer",
     "optional": "facultatif",
     "copied": "Copié",
-    "copy": "Copier"
+    "copy": "Copier",
+    "gettingReady": "Nous préparons tout pour vous — cela peut prendre un peu de temps la première fois.",
+    "patience": "Cela prend un peu plus de temps que d'habitude. Merci de votre patience."
   },
   "footer": {
     "rights": "Un outil civique de vérification pour le Cameroun.",

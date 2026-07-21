@@ -247,7 +247,9 @@
     "close": "Close",
     "optional": "optional",
     "copied": "Copied",
-    "copy": "Copy"
+    "copy": "Copy",
+    "gettingReady": "Getting things ready for you — this can take a little while the first time.",
+    "patience": "This is taking a little longer than usual. Thank you for your patience."
   },
   "footer": {
     "rights": "A civic verification tool for Cameroon.",

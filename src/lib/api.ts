@@ -18,28 +18,76 @@ class ApiError extends Error {
 
 // --- Warm-up ---------------------------------------------------------------
 // The free backend sleeps after ~15 min idle and cold-starts in ~30-50s. We ping
-// /health the moment a user shows intent (opens the tool, focuses the box, starts
-// adding a file) so the server is already waking up by the time they submit.
-// Fire-and-forget and throttled so it never blocks the UI or spams the server.
-let _lastWarm = 0;
+// /health the moment the app loads (from Layout, before the user even reaches a
+// submit box) and again on later signs of intent, then poll briefly until it
+// responds. The UI reads `warmState` to show a calm "getting ready" message
+// instead of a technical "server unreachable" one — see useWarmState() below.
+export type WarmState = "idle" | "warming" | "ready";
 
-export function warmUp(): void {
-  const now = Date.now();
-  if (now - _lastWarm < 45_000) return; // at most once every 45s
-  _lastWarm = now;
+const READY_TTL_MS = 12 * 60 * 1000; // just under Render's 15-min sleep window
+const POLL_EVERY_MS = 6_000;
+const GIVE_UP_AFTER_MS = 70_000; // stop tracking; the real request wakes it regardless
+
+let warmState: WarmState = "idle";
+let readyAt = 0;
+const listeners = new Set<() => void>();
+
+function setState(s: WarmState) {
+  warmState = s;
+  if (s === "ready") readyAt = Date.now();
+  listeners.forEach((cb) => cb());
+}
+
+export function subscribeWarmState(cb: () => void): () => void {
+  listeners.add(cb);
+  return () => listeners.delete(cb);
+}
+
+export function getWarmState(): WarmState {
+  return warmState;
+}
+
+async function pingOnce(timeoutMs: number): Promise<boolean> {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const ctrl = new AbortController();
-    setTimeout(() => ctrl.abort(), 8000);
-    void fetch(`${API_BASE_URL}/health`, {
+    const res = await fetch(`${API_BASE_URL}/health`, {
       method: "GET",
       cache: "no-store",
       signal: ctrl.signal,
-    }).catch(() => {
-      /* ignore — this is best-effort */
     });
+    return res.ok;
   } catch {
-    /* ignore */
+    return false;
+  } finally {
+    clearTimeout(t);
   }
+}
+
+/** Wake the backend and track readiness. Safe to call often — it is a no-op
+ * while already warming, and re-checks once a prior "ready" goes stale. */
+export function warmUp(): void {
+  if (warmState === "warming") return;
+  if (warmState === "ready" && Date.now() - readyAt < READY_TTL_MS) return;
+
+  setState("warming");
+  const startedAt = Date.now();
+
+  const poll = async () => {
+    const ok = await pingOnce(8_000);
+    if (ok) {
+      setState("ready");
+      return;
+    }
+    if (Date.now() - startedAt > GIVE_UP_AFTER_MS) {
+      // Stop showing "getting ready" even if we never confirmed it — the actual
+      // analyze request will still wake the server, just possibly slowly.
+      setState("ready");
+      return;
+    }
+    setTimeout(poll, POLL_EVERY_MS);
+  };
+  void poll();
 }
 
 async function handle<T>(res: Response): Promise<T> {

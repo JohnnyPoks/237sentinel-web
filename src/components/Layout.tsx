@@ -3,6 +3,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { APP_NAME, TELEGRAM_BOT_URL } from "../config";
 import { warmUp } from "../lib/api";
+import { useWarmState } from "../lib/useWarmState";
 import ShieldMark from "./ShieldMark";
 
 function LangToggle() {
@@ -31,6 +32,7 @@ export default function Layout() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const warmState = useWarmState();
 
   // The layout wraps every page, so this warms the free backend the instant the
   // app loads — before the user reaches or touches the submit box.
@@ -125,6 +127,16 @@ export default function Layout() {
           </nav>
         )}
       </header>
+
+      {/* Calm, non-technical patience note while the free backend wakes up. */}
+      {warmState === "warming" && (
+        <div
+          role="status"
+          className="border-b border-sand-200 bg-sand-100 px-5 py-2 text-center text-sm text-ink-soft"
+        >
+          {t("common.gettingReady")}
+        </div>
+      )}
 
       <main id="main" className="flex-1">
         <Outlet />
